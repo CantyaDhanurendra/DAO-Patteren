@@ -78,7 +78,7 @@ public class MainApplication {
             List<Praktikum> praktikumList = praktikumDao.findAll();
             for (Praktikum s : praktikumList) {
                 System.out.print(s.getId() + " - ");
-                System.out.print(s.getIdasisten() + " - ");
+                System.out.print(s.getIdAsisten() + " - ");
                 System.out.print(s.getMatkul() + " - ");
                 System.out.println(s.getNilai());
             }*/

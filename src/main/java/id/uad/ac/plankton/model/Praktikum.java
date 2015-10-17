@@ -4,45 +4,61 @@ package id.uad.ac.plankton.model;
  * Created by dhanurendra on 17/10/15.
  */
 public class Praktikum {
-    private int id;
-    private int idasisten;
-    private String matkul;
+    //private int id;
+    //private int idAsisten;
+
+    private int idPraktikum;
+    private Asisten asisten;
+    private Student student;
+    private String mataKuliah;
     private int nilai;
 
     public Praktikum(){}
 
-    public Praktikum(int id, int idasisten, String matkul, int nilai){
-        this.id = id;
-        this.idasisten = idasisten;
-        this.matkul = matkul;
+    public Praktikum(int idPraktikum, Asisten asisten, Student student, String mataKuliah, int nilai){
+        this.idPraktikum = idPraktikum;
+        this.asisten = asisten;
+        this.student = student;
+        this.mataKuliah = mataKuliah;
         this.nilai = nilai;
     }
 
-    public int getId() {
-        return id;
+
+    public int getIdPrak() {
+        return idPraktikum;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdPrak(int idPrak) {
+        this.idPraktikum = idPraktikum;
     }
 
-    public int getIdasisten() {
-        return idasisten;
+    public Asisten getAsisten() {
+        return asisten;
     }
 
-    public void setIdasisten(int idasisten) {
-        this.idasisten = idasisten;
+    public void setAsisten(Asisten asisten) {
+        this.asisten = asisten;
     }
 
-    public String getMatkul() {
-        return matkul;
+    public Student getStudent() {
+        return student;
     }
 
-    public void setMatkul(String matkul) {
-        this.matkul = matkul;
+    public void setStudent(Student student) {
+        this.student = student;
     }
 
-    public int getNilai() { return nilai; }
+    public String getMataKuliah() {
+        return mataKuliah;
+    }
+
+    public void setMataKuliah(String mataKuliah) {
+        this.mataKuliah = mataKuliah;
+    }
+
+    public int getNilai() {
+        return nilai;
+    }
 
     public void setNilai(int nilai) {
         this.nilai = nilai;
