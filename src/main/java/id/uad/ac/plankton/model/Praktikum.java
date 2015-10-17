@@ -5,15 +5,15 @@ package id.uad.ac.plankton.model;
  */
 public class Praktikum {
     private int id;
-    private int id_asisten;
+    private int idasisten;
     private String matkul;
     private int nilai;
 
     public Praktikum(){}
 
-    public Praktikum(int id, int id_asisten, String matkul, int nilai){
+    public Praktikum(int id, int idasisten, String matkul, int nilai){
         this.id = id;
-        this.id_asisten = id_asisten;
+        this.idasisten = idasisten;
         this.matkul = matkul;
         this.nilai = nilai;
     }
@@ -26,12 +26,12 @@ public class Praktikum {
         this.id = id;
     }
 
-    public int getId_asisten() {
-        return id_asisten;
+    public int getIdasisten() {
+        return idasisten;
     }
 
-    public void setId_asisten(int id_asisten) {
-        this.id_asisten = id_asisten;
+    public void setIdasisten(int idasisten) {
+        this.idasisten = idasisten;
     }
 
     public String getMatkul() {

@@ -48,8 +48,8 @@ public class MainApplication {
             //asistenDao.update(upas);
             //asistenDao.delete(101);
            // System.out.println();
-            //System.out.println("Nama Asisten : " + asistenDao.findById(100).getName_asisten());
-            //System.out.println("Alamat Aasisten : " + asistenDao.findById(100).getAddress_asisten());
+            //System.out.println("Nama Asisten : " + asistenDao.findById(100).getNameasisten());
+            //System.out.println("Alamat Aasisten : " + asistenDao.findById(100).getAddressasisten());
 
             //praktikumDao.insert(pam);
             //praktikumDao.update(uppr);
@@ -69,16 +69,16 @@ public class MainApplication {
             /*
             List<Asisten> asistensList = asistenDao.findAll();
             for (Asisten s : asistensList) {
-                System.out.print(s.getId_asisten() + " - ");
-                System.out.print(s.getName_asisten() + " - ");
-                System.out.println(s.getAddress_asisten());
+                System.out.print(s.getIdasisten() + " - ");
+                System.out.print(s.getNameasisten() + " - ");
+                System.out.println(s.getAddressasisten());
             }*/
 
             /*
             List<Praktikum> praktikumList = praktikumDao.findAll();
             for (Praktikum s : praktikumList) {
                 System.out.print(s.getId() + " - ");
-                System.out.print(s.getId_asisten() + " - ");
+                System.out.print(s.getIdasisten() + " - ");
                 System.out.print(s.getMatkul() + " - ");
                 System.out.println(s.getNilai());
             }*/

@@ -15,12 +15,12 @@ public interface AsistenDao {
 
     void update(Asisten updatedAsisten) throws SQLException;
 
-    void delete(int id_asisten) throws SQLException;
+    void delete(int idasisten) throws SQLException;
 
-    Asisten findById(int id_asisten) throws SQLException;
+    Asisten findById(int idasisten) throws SQLException;
 
     List<Asisten> findAll();
 
-    List<Asisten> findByNameLike(String name_asisten);
+    List<Asisten> findByNameLike(String nameasisten);
 
 }

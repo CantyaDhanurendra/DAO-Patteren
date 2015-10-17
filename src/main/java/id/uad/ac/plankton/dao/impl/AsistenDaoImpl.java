@@ -24,10 +24,10 @@ public class AsistenDaoImpl implements AsistenDao {
     @Override
     public void insert(Asisten asisten) throws SQLException {
 
-        PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO asisten (id_asisten, name_asisten,address_asisten) VALUES (?,?,?)");
-        preparedStatement.setInt(1, asisten.getId_asisten());
-        preparedStatement.setString(2, asisten.getName_asisten());
-        preparedStatement.setString(3, asisten.getAddress_asisten());
+        PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO asisten (idasisten, nameasisten,addressasisten) VALUES (?,?,?)");
+        preparedStatement.setInt(1, asisten.getIdasisten());
+        preparedStatement.setString(2, asisten.getNameasisten());
+        preparedStatement.setString(3, asisten.getAddressasisten());
 
         preparedStatement.executeUpdate();
     }
@@ -35,32 +35,32 @@ public class AsistenDaoImpl implements AsistenDao {
     @Override
     public void update(Asisten updateAsisten) throws SQLException {
 
-        PreparedStatement preparedStatement = connection.prepareStatement("UPDATE asisten SET name_asisten=?,address_asisten=? WHERE id_asisten=?");
-        preparedStatement.setString(1, updateAsisten.getName_asisten());
-        preparedStatement.setString(2, updateAsisten.getAddress_asisten());
-        preparedStatement.setInt(3, updateAsisten.getId_asisten());
+        PreparedStatement preparedStatement = connection.prepareStatement("UPDATE asisten SET nameasisten=?,addressasisten=? WHERE idasisten=?");
+        preparedStatement.setString(1, updateAsisten.getNameasisten());
+        preparedStatement.setString(2, updateAsisten.getAddressasisten());
+        preparedStatement.setInt(3, updateAsisten.getIdasisten());
 
         preparedStatement.executeUpdate();
     }
 
     @Override
-    public void delete(int id_aisten) throws SQLException {
-        PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM asisten WHERE id_asisten=?");
-        preparedStatement.setInt(1, id_aisten);
+    public void delete(int idaisten) throws SQLException {
+        PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM asisten WHERE idasisten=?");
+        preparedStatement.setInt(1, idaisten);
         preparedStatement.executeUpdate();
 
     }
 
     @Override
-    public Asisten findById(int id_asisten) {
+    public Asisten findById(int idasisten) {
         Asisten asisten = new Asisten();
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("SELECT name_asisten, address_asisten FROM asisten WHERE id_asisten=?");
-            preparedStatement.setInt(1, id_asisten);
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT nameasisten, addressasisten FROM asisten WHERE idasisten=?");
+            preparedStatement.setInt(1, idasisten);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                asisten.setName_asisten(resultSet.getString("name_asisten"));
-                asisten.setAddress_asisten(resultSet.getString("address_asisten"));
+                asisten.setNameasisten(resultSet.getString("nameasisten"));
+                asisten.setAddressasisten(resultSet.getString("addressasisten"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -72,16 +72,16 @@ public class AsistenDaoImpl implements AsistenDao {
     public List<Asisten> findAll() {
 
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("SELECT id_asisten,name_asisten,address_asisten FROM asisten");
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT idasisten,nameasisten,addressasisten FROM asisten");
             ResultSet resultSet = preparedStatement.executeQuery();
 
             List<Asisten> asistenList= new ArrayList<>();
             while (resultSet.next()) {
                 Asisten asisten= new Asisten();
 
-                asisten.setId_asisten(resultSet.getInt("id_asisten"));
-                asisten.setName_asisten(resultSet.getString("name_asisten"));
-                asisten.setAddress_asisten(resultSet.getString("address_asisten"));
+                asisten.setIdasisten(resultSet.getInt("idasisten"));
+                asisten.setNameasisten(resultSet.getString("nameasisten"));
+                asisten.setAddressasisten(resultSet.getString("addressasisten"));
 
                 asistenList.add(asisten);
             }
