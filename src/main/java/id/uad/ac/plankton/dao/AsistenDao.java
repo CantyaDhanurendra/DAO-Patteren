@@ -15,9 +15,9 @@ public interface AsistenDao {
 
     void update(Asisten updatedAsisten) throws SQLException;
 
-    void delete(int idasisten) throws SQLException;
+    void delete(int idAsisten) throws SQLException;
 
-    Asisten findById(int idasisten) throws SQLException;
+    Asisten findById(int idAsisten) throws SQLException;
 
     List<Asisten> findAll();
 

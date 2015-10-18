@@ -4,40 +4,40 @@ package id.uad.ac.plankton.model;
  * Created by dhanurendra on 17/10/15.
  */
 public class Asisten {
-    private int idasisten;
-    private String nameasisten;
-    private String addressasisten;
+    private int idAsisten;
+    private String nameAsisten;
+    private String addressAsisten;
 
     public Asisten() {}
 
-    public Asisten (int idasisten, String nameasisten, String addressasisten){
-        this.idasisten = idasisten;
-        this.nameasisten = nameasisten;
-        this.addressasisten = addressasisten;
+    public Asisten (int idAsisten, String nameAsisten, String addressAsisten){
+        this.idAsisten = idAsisten;
+        this.nameAsisten = nameAsisten;
+        this.addressAsisten = addressAsisten;
     }
 
 
-    public int getIdasisten() {
-        return idasisten;
+    public int getIdAsisten() {
+        return idAsisten;
     }
 
-    public void setIdasisten(int idasisten) {
-        this.idasisten = idasisten;
+    public void setIdAsisten(int idAsisten) {
+        this.idAsisten = idAsisten;
     }
 
-    public String getNameasisten() {
-        return nameasisten;
+    public String getNameAsisten() {
+        return nameAsisten;
     }
 
-    public void setNameasisten(String nameasisten) {
-        this.nameasisten = nameasisten;
+    public void setNameAsisten(String nameAsisten) {
+        this.nameAsisten = nameAsisten;
     }
 
-    public String getAddressasisten() {
-        return addressasisten;
+    public String getAddressAsisten() {
+        return addressAsisten;
     }
 
-    public void setAddressasisten(String addressasisten) {
-        this.addressasisten = addressasisten;
+    public void setAddressAsisten(String addressAsisten) {
+        this.addressAsisten = addressAsisten;
     }
 }

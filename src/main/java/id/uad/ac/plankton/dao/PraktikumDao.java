@@ -16,9 +16,9 @@ public interface PraktikumDao {
 
     void update(Praktikum updatePraktikum) throws SQLException;
 
-    void delete(int id) throws SQLException;
+    void delete(int kode) throws SQLException;
 
-    Praktikum findById(int id) throws SQLException;
+    Praktikum findById(int kode) throws SQLException;
 
     List<Praktikum> findAll();
 

@@ -7,29 +7,28 @@ public class Praktikum {
     //private int id;
     //private int idAsisten;
 
-    private int idPraktikum;
+    private int kode;
     private Asisten asisten;
     private Student student;
     private String mataKuliah;
-    private int nilai;
+    private String nilai;
 
     public Praktikum(){}
 
-    public Praktikum(int idPraktikum, Asisten asisten, Student student, String mataKuliah, int nilai){
-        this.idPraktikum = idPraktikum;
+    public Praktikum(int kode, Asisten asisten, Student student, String mataKuliah, String nilai){
+        this.kode = kode;
         this.asisten = asisten;
         this.student = student;
         this.mataKuliah = mataKuliah;
         this.nilai = nilai;
     }
 
-
-    public int getIdPrak() {
-        return idPraktikum;
+    public int getKode() {
+        return kode;
     }
 
-    public void setIdPrak(int idPrak) {
-        this.idPraktikum = idPraktikum;
+    public void setKode(int kode) {
+        this.kode = kode;
     }
 
     public Asisten getAsisten() {
@@ -48,19 +47,17 @@ public class Praktikum {
         this.student = student;
     }
 
-    public String getMataKuliah() {
-        return mataKuliah;
-    }
+    public String getMataKuliah() { return mataKuliah;}
 
     public void setMataKuliah(String mataKuliah) {
         this.mataKuliah = mataKuliah;
     }
 
-    public int getNilai() {
+    public String getNilai() {
         return nilai;
     }
 
-    public void setNilai(int nilai) {
+    public void setNilai(String nilai) {
         this.nilai = nilai;
     }
 }

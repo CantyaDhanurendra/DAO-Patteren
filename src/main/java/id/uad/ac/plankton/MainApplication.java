@@ -31,7 +31,7 @@ public class MainApplication {
         //Praktikum pam = new Praktikum(2,101,"PAM",80);
         //Praktikum pwd = new Praktikum(1,100,"PWD",90);
        //Praktikum uppr = new Praktikum(1,100,"BD",95);
-
+        //Praktikum pbps = new Praktikum(2,2,200,"PBPS","A");
 
         try {
             StudentDao studentDao = new StudentDaoImpl(DatabaseConnection.getInstance().getConnection());
@@ -51,7 +51,7 @@ public class MainApplication {
             //System.out.println("Nama Asisten : " + asistenDao.findById(100).getNameasisten());
             //System.out.println("Alamat Aasisten : " + asistenDao.findById(100).getAddressasisten());
 
-            //praktikumDao.insert(pam);
+            //praktikumDao.insert(pbps);
             //praktikumDao.update(uppr);
             //praktikumDao.delete(2);
             //System.out.println("Matkul : " + praktikumDao.findById(1).getMatkul());
@@ -69,19 +69,20 @@ public class MainApplication {
             /*
             List<Asisten> asistensList = asistenDao.findAll();
             for (Asisten s : asistensList) {
-                System.out.print(s.getIdasisten() + " - ");
-                System.out.print(s.getNameasisten() + " - ");
-                System.out.println(s.getAddressasisten());
+                System.out.print(s.getIdAsisten() + " - ");
+                System.out.print(s.getNameAsisten() + " - ");
+                System.out.println(s.getAddressAsisten());
             }*/
 
             /*
             List<Praktikum> praktikumList = praktikumDao.findAll();
             for (Praktikum s : praktikumList) {
-                System.out.print(s.getId() + " - ");
-                System.out.print(s.getIdAsisten() + " - ");
-                System.out.print(s.getMatkul() + " - ");
+                System.out.print(s.getKode() + " - ");
+                //System.out.print(s.getIdAsisten() + " - ");
+                System.out.print(s.getMataKuliah() + " - ");
                 System.out.println(s.getNilai());
             }*/
+
 
 
         } catch (SQLException e) {
